@@ -82,6 +82,7 @@ body {
     text-decoration: none;
     border: none;
     cursor: pointer;
+    font-size: inherit;
 }
 
 .btn:hover, .btn:focus {
@@ -145,5 +146,47 @@ body {
     max-width: 300px;
 }
 
+
+.form {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.form label {
+    color: black;
+    font-weight: bold;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    margin-top: .25rem;
+    margin-bottom: .75rem;
+    outline: none;
+    border: 1px solid #1B2522;
+    border-radius: .3em;
+    padding: .5em;
+    color: inherit;
+    font-family: inherit;
+}
+
+.form textarea {
+    resize: vertical;
+    min-height: 75px;
+    max-height: 200px;
+}
+
+.form input:focus,
+.form textarea:focus {
+    border-color: #0AF;
+}
+
+.btn-container {
+    text-align: end;
+}
+
+.btn-square {
+    border-radius: .3em;
+}
 
 
