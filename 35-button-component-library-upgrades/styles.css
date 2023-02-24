@@ -3,8 +3,22 @@
   }
   
   .btn {
-    background-color: hsl(0, 0%, 90%);
-    border: 1px solid hsl(0, 0%, 70%);
+    --background-hue: 0;
+    --background-saturation: 0%;
+    --initial-background-lightness: 90%;
+    --background-lightness: var(--initial-background-lightness);
+    --border-lightness: calc(var(--initial-background-lightness) - 20%);
+
+    background-color: hsl(
+      var(--background-hue),
+      var(--background-saturation), 
+      var(--background-lightness)
+    );
+    border: 1px solid hsl(
+      var(--background-hue), 
+      var(--background-saturation), 
+      var(--border-lightness)
+    );
     outline: none;
     cursor: pointer;
     padding: .5em 1em;
@@ -12,13 +26,21 @@
   }
   
   .btn:hover, .btn:focus {
+    --background-lightness: calc(var(--initial-background-lightness) - 10%); 
     background-color: hsl(0, 0%, 80%);
-    box-shadow: 0 0 5px 0 hsl(0, 0%, 70%);
+    box-shadow: 0 0 5px 0 hsl(
+      var(--background-hue), 
+      var(--background-saturation),
+      var(--border-lightness)
+    );
   }
   
   .btn.btn-primary {
-    background-color: hsl(271, 70%, 50%);
-    border-color: hsl(271, 70%, 30%);
+    --background-hue: 271;
+    --background-saturation: 70%;
+    --initial-background-lightness: 50%;
+    /* background-color: hsl(271, 70%, 50%);
+    border-color: hsl(271, 70%, 30%); */
     color: white;
   }
   
@@ -28,6 +50,9 @@
   }
   
   .btn.btn-accent {
+    --background-hue: 200;
+    --background-saturation: 100%;
+    --initial-background-lightness: 40%;
     background-color: hsl(200, 100%, 40%);
     border-color: hsl(200, 100%, 20%);
     color: white;
