@@ -53,19 +53,25 @@
     --background-hue: 200;
     --background-saturation: 100%;
     --initial-background-lightness: 40%;
-    background-color: hsl(200, 100%, 40%);
-    border-color: hsl(200, 100%, 20%);
+    /* background-color: hsl(200, 100%, 40%);
+    border-color: hsl(200, 100%, 20%); */
     color: white;
   }
   
   .btn.btn-accent:hover, .btn.btn-accent:focus {
-    background-color: hsl(200, 100%, 30%);
-    box-shadow: 0 0 5px 0 hsl(200, 100%, 20%);
+    --background-hue: 200;
+    --background-saturation: 100%;
+    --initial-background-lightness: 40%;
+    /* background-color: hsl(200, 100%, 30%);
+    box-shadow: 0 0 5px 0 hsl(200, 100%, 20%); */
   }
   
   .btn.btn-danger {
-    background-color: hsl(0, 60%, 50%);
-    border-color: hsl(0, 60%, 30%);
+    --background-hue: 0;
+    --background-saturation: 60%;
+    --initial-background-lightness: 50%;
+    /* background-color: hsl(0, 60%, 50%);
+    border-color: hsl(0, 60%, 30%); */
     color: white;
   }
   
