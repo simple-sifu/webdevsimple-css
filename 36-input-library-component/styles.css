@@ -3,7 +3,8 @@ input {
   }
   
   .input {
-    border: 1px solid #AAA;
+    --border-color: #AAA;
+    border: 1px solid var(--border-color);
     outline: none;
     font-size: inherit;
     padding: .5em;
@@ -11,26 +12,24 @@ input {
   }
   
   .input:focus {
-    border-color: #0AF;
-    box-shadow: 0 0 5px 0 #0AF;
+    --border-color: #0AF;
+    box-shadow: 0 0 5px 0 var(--border-color);
   }
   
   .input.input-success {
-    border-color: #27AE60;
+    --border-color: #27AE60;
   }
   
   .input.input-success:focus {
-    border-color: #0F0;
-    box-shadow: 0 0 5px 0 #0F0;
+    --border-color: #0F0;
   }
   
   .input.input-error {
-    border-color: #EB5757;
+    --border-color: #EB5757;
   }
   
   .input.input-error:focus {
-    border-color: #F00;
-    box-shadow: 0 0 5px 0 #F00;
+    --border-color: #F00;
   }
   
   .input.input-large {
