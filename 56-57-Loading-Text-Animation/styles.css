@@ -19,4 +19,62 @@ body {
     padding: .5em 1em;
     border-radius: .3em;
     cursor: pointer;
+    position: relative;
+}
+
+.btn-load::after {
+    content: 'loading';
+    position: absolute;
+    color: black;
+    transform: translateY(200%);
+    left: 0;
+    bottom: 0;
+    animation: loading 2s linear forwards;
+}
+
+@keyframes loading {
+
+    0% {
+
+    }
+
+    10% {
+        content: "loading.";
+    }
+
+    20% {
+        content: "loading..";
+    }
+
+    30% {
+        content: "loading...";
+    }
+
+    40% {
+        content: "loading....";
+    }
+
+    50% {
+        content: "loading.....";
+    }
+
+    60% {
+        content: "loading....";
+    }
+
+    70% {
+        content: "loading...";
+    }
+
+    80% {
+        content: "loading..";
+    }
+
+    90% {
+        content: "loading.";
+    }
+
+    100% {
+        content: "loaded";
+    }
 }
