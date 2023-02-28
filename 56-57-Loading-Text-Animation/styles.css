@@ -35,7 +35,7 @@ body {
 @keyframes loading {
 
     0% {
-
+        opacity: 1;
     }
 
     10% {
@@ -56,6 +56,7 @@ body {
 
     50% {
         content: "loading.....";
+        opacity: .6;
     }
 
     60% {
@@ -76,5 +77,6 @@ body {
 
     100% {
         content: "loaded";
+        opacity: 1;
     }
 }
