@@ -1,0 +1,22 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+.btn {
+    background-color: hsl(200, 100%, 50%);
+    border: none;
+    outline: none;
+    color: white;
+    padding: .5em 1em;
+    border-radius: .3em;
+    cursor: pointer;
+}
